@@ -1,305 +1,454 @@
+This is a sophisticated request. You are asking to combine strategic copywriting principles (from the "Landing Page Creation" PDF) with a specific visual aesthetic (the abstract, modern book cover design you uploaded).
+
+I have synthesized these two requirements.
+
+The Strategy (Applying the PDF Principles):
+
+The "Hero" Hook: I used the "Demand-Side" approach. Instead of just saying "GTM Workbooks," the headline focuses on the transformation (Chaos 
+→
+→
+ Clarity).
+
+The Struggle: I added a section called "The GTM Disconnect" to address the pain point (product is good, but launch failed) before introducing the solution.
+
+The "So What?" Value: Each workbook card doesn't just list the title; it explains the outcome (e.g., "Stop guessing, start knowing").
+
+Visual Design: I created Custom CSS Art to replicate that exact abstract, colorful, modern book cover style you uploaded. You do not need to download images—the code draws the book covers for you.
+
+The Code
+
+Copy this code into your index.html file.
+
+code
+Html
+play_circle
+download
+content_copy
+expand_less
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTM Strategy Workbooks - The Missing Manual</title>
+    <title>The GTM Operating System | Language-Market Fit</title>
     <style>
-        /* Modern Reset */
+        /* --- 1. CORE VARIABLES & RESET --- */
         :root {
-            --navy: #0a2540;
-            --blue: #0077ff;
-            --light-blue: #f6f9fc;
+            /* Palette extracted from your Book Cover Image */
+            --bg-color: #f4f6f8;
+            --text-dark: #1a202c;
+            --text-light: #4a5568;
             --white: #ffffff;
-            --text-gray: #425466;
-            --text-dark: #0a2540;
+            
+            /* The Abstract Art Colors */
+            --accent-green: #9dc08b;
+            --accent-blue: #6096b4;
+            --accent-pink: #e5989b;
+            --accent-yellow: #eec170;
+            --accent-navy: #2d3748;
+
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: var(--light-blue);
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
             color: var(--text-dark);
             line-height: 1.6;
         }
 
-        /* Utility */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Hero Section */
+        /* --- 2. HERO SECTION (The "Now You Can" Hook) --- */
         header {
-            background-color: var(--navy);
-            color: var(--white);
-            padding: 80px 0 100px;
+            background-color: var(--white);
+            padding: 100px 0 80px;
             text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .pill {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--text-dark);
             margin-bottom: 20px;
-            letter-spacing: -0.5px;
+            line-height: 1.1;
         }
 
-        .subtitle {
+        .sub-headline {
             font-size: 1.25rem;
-            color: #aab7c4;
-            max-width: 600px;
+            color: var(--text-light);
+            max-width: 700px;
             margin: 0 auto 40px;
         }
 
-        .cta-main {
-            background-color: var(--blue);
+        .cta-button {
+            background-color: var(--text-dark);
             color: var(--white);
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
+            padding: 18px 40px;
             font-size: 1.1rem;
-            transition: transform 0.2s, background-color 0.2s;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
             display: inline-block;
         }
 
-        .cta-main:hover {
+        .cta-button:hover {
             transform: translateY(-2px);
-            background-color: #0056b3;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
 
-        /* Workbook Grid */
-        #workbooks {
-            margin-top: -60px; /* Overlap effect */
-            padding-bottom: 80px;
+        /* --- 3. THE STRUGGLE (The "Before" State) --- */
+        .struggle-section {
+            background-color: #fff;
+            padding: 80px 0;
+            text-align: center;
         }
+
+        .struggle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .struggle-card {
+            background: var(--bg-color);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-pink);
+        }
+
+        .struggle-card h4 { margin-bottom: 10px; font-size: 1.1rem; }
+        .struggle-card p { font-size: 0.95rem; color: var(--text-light); }
+
+        /* --- 4. THE WORKBOOKS (The Value Exchange) --- */
+        .library-section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 50px;
+            justify-items: center;
         }
 
         .card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            background: transparent;
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* --- 5. CSS ART BOOK COVERS (Matches your Image) --- */
+        .book-cover {
+            width: 240px;
+            height: 340px;
+            background-color: #f7f7f7;
+            position: relative;
+            box-shadow: 
+                -10px 10px 20px rgba(0,0,0,0.1), /* Drop Shadow */
+                inset 3px 0 2px rgba(255,255,255,0.8), /* Spine Highlight */
+                inset -1px 0 2px rgba(0,0,0,0.1); /* Edge Shadow */
+            border-radius: 2px 8px 8px 2px;
+            margin-bottom: 30px;
+            overflow: hidden;
             transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center; /* Center content for book look */
-            text-align: center;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* NEW: Book Cover Styling */
-        .book-cover {
-            width: 180px;  /* Fixed width for consistency */
-            height: 250px; /* Vertical aspect ratio */
-            object-fit: cover;
-            border-radius: 4px 8px 8px 4px;
-            margin-bottom: 25px;
-            /* The 3D Book Shadow Effect */
-            box-shadow: 
-                -2px 0 0 rgba(255,255,255,0.4) inset, /* Spine highlight */
-                -5px 5px 15px rgba(0,0,0,0.25); /* Drop shadow */
-            border-left: 6px solid rgba(255,255,255,0.1); /* Spine effect */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 30px;
         }
 
         .card:hover .book-cover {
-            transform: scale(1.02);
-            box-shadow: -8px 8px 20px rgba(0,0,0,0.3);
+            transform: translateY(-10px) rotate(-1deg);
+            box-shadow: -15px 15px 30px rgba(0,0,0,0.15);
         }
 
-        .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--navy);
-            width: 100%;
+        /* The Abstract Shapes */
+        .cover-art {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
         }
 
-        .tag {
+        /* Unique patterns for each book to match the style */
+        .pattern-1 { /* Market Intelligence - Blue/Green */
+            background: 
+                radial-gradient(circle at 10% 20%, var(--accent-blue) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, var(--accent-green) 0%, transparent 25%),
+                linear-gradient(135deg, transparent 40%, rgba(96, 150, 180, 0.2) 100%);
+        }
+        .pattern-1::after { /* The squiggly line */
+            content: ""; position: absolute; top: 40%; left: 20%; width: 60%; height: 20px;
+            border-top: 8px solid var(--accent-navy); border-radius: 50%; opacity: 0.8;
+        }
+
+        .pattern-2 { /* Strategy - Pink/Yellow */
+            background: 
+                radial-gradient(circle at 80% 10%, var(--accent-pink) 0%, transparent 30%),
+                radial-gradient(circle at 20% 90%, var(--accent-yellow) 0%, transparent 20%);
+        }
+        .pattern-2::before { /* The geometric dot */
+            content: ""; position: absolute; top: 50%; left: 50%; width: 40px; height: 40px;
+            background: var(--accent-navy); border-radius: 50%; transform: translate(-50%, -50%);
+        }
+
+        .pattern-3 { /* Narrative - Green/Pink */
+            background: linear-gradient(to bottom right, #fff 50%, var(--accent-green) 50%);
+        }
+        .pattern-3::after {
+            content: ""; position: absolute; top: 20%; right: 20%; width: 20px; height: 100px;
+            background: var(--accent-pink); border-radius: 10px;
+        }
+
+        .pattern-4 { /* Growth - Blue/Yellow */
+            background: 
+                linear-gradient(to right, transparent 90%, var(--accent-blue) 90%),
+                radial-gradient(circle at 50% 50%, var(--accent-yellow) 0%, transparent 40%);
+        }
+
+        .pattern-5 { /* Execution - Navy/Green */
+            background: repeating-linear-gradient(45deg, var(--bg-color), var(--bg-color) 10px, var(--accent-green) 10px, var(--accent-green) 20px);
+            opacity: 0.3;
+        }
+
+        /* Book Text */
+        .book-title-group {
+            z-index: 1;
+            position: relative;
+        }
+        
+        .book-series {
+            font-size: 0.65rem;
             text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            color: var(--blue);
+            letter-spacing: 2px;
+            color: var(--text-light);
+            margin-bottom: 10px;
             font-weight: 700;
-            margin-bottom: 15px;
-            display: block;
+        }
+
+        .book-main-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--accent-navy);
+            text-transform: capitalize;
+        }
+
+        .book-logo {
+            z-index: 1;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-light);
+            border-top: 2px solid var(--text-dark);
+            padding-top: 10px;
+            width: 40px;
+        }
+
+        /* --- 6. TEXT CONTENT --- */
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
         }
 
         .card p {
-            color: var(--text-gray);
+            color: var(--text-light);
             font-size: 0.95rem;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .btn-download {
-            background-color: var(--light-blue);
-            color: var(--blue);
-            text-align: center;
-            padding: 12px 30px; /* Wider button */
-            border-radius: 6px;
+        .download-link {
+            color: var(--accent-blue);
+            font-weight: 700;
             text-decoration: none;
-            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 2px solid transparent;
             transition: 0.2s;
-            width: 100%;
         }
+        .download-link:hover { border-bottom-color: var(--accent-blue); }
 
-        .btn-download:hover {
-            background-color: var(--blue);
-            color: var(--white);
-        }
-
-        /* Framework Section */
-        #framework {
-            background-color: var(--white);
-            padding: 80px 0;
-            border-top: 1px solid #e6ebf1;
-        }
-
-        .framework-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .framework-content h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: var(--navy);
-        }
-
-        .phase-list {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .phase-item {
-            background: var(--light-blue);
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: 500;
-            color: var(--navy);
-            border: 1px solid #dae1e7;
-        }
-
-        /* Footer */
+        /* --- 7. FOOTER --- */
         footer {
-            background-color: var(--navy);
-            color: #aab7c4;
+            background-color: var(--text-dark);
+            color: #718096;
+            padding: 60px 0;
             text-align: center;
-            padding: 40px 0;
             font-size: 0.9rem;
         }
 
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            #workbooks { margin-top: -30px; }
+            h1 { font-size: 2.2rem; }
+            .book-cover { width: 200px; height: 280px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- HERO SECTION -->
     <header>
         <div class="container">
-            <h1>The Missing Manual for Go-to-Market</h1>
-            <p class="subtitle">5 Essential Workbooks to bridge the gap between Product, Marketing, and Sales. Stop guessing and start executing.</p>
-            <a href="#" class="cta-main">Download All Workbooks (ZIP)</a>
+            <span class="pill">New Release 2024</span>
+            <h1>The GTM Operating System</h1>
+            <p class="sub-headline">
+                Stop guessing. Start scaling. A step-by-step playbook to align Product, Marketing, and Sales using the "Language-Market Fit" methodology.
+            </p>
+            <a href="#library" class="cta-button">Get the Complete Series</a>
         </div>
     </header>
 
-    <section id="workbooks">
+    <!-- STRUGGLE SECTION (Applying "Language-Market Fit" Phase 1) -->
+    <section class="struggle-section">
         <div class="container">
-            <div class="grid">
-                <!-- Card 1 -->
-                <div class="card">
-                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+1%0AICP+Profile" alt="ICP Workbook Cover" class="book-cover">
-                    <div>
-                        <span class="tag">Phase 1: Intelligence</span>
-                        <h3>The Ideal Customer Profile</h3>
-                        <p>Don't just define the person. Define the company size, revenue, and tech stack before you sell.</p>
-                    </div>
-                    <a href="#" class="btn-download">Download PDF</a>
+            <div class="section-title">
+                <h2>The Disconnect</h2>
+                <p>Why great products fail to find their market.</p>
+            </div>
+            <div class="struggle-grid">
+                <div class="struggle-card">
+                    <h4>The "Supply-Side" Trap</h4>
+                    <p>You are talking about features and specs. Your customers are worried about their specific struggles. There is a mismatch in language.</p>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="card">
-                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+2%0ACustomer+Journey" alt="Customer Journey Cover" class="book-cover">
-                    <div>
-                        <span class="tag">Phase 4: Growth</span>
-                        <h3>The Customer Journey Map</h3>
-                        <p>Connect marketing signals to sales actions. Map the path from stranger to closed-won revenue.</p>
-                    </div>
-                    <a href="#" class="btn-download">Download PDF</a>
+                <div class="struggle-card">
+                    <h4>The "Silo" Effect</h4>
+                    <p>Product builds one thing. Marketing promises another. Sales sells a third. The customer gets confused and leaves.</p>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="card">
-                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+3%0AContent+Strategy" alt="Content Strategy Cover" class="book-cover">
-                    <div>
-                        <span class="tag">Phase 3: Narrative</span>
-                        <h3>Content Strategy Plan</h3>
-                        <p>Messaging is what you say; Content is how you deliver it. Plan your blogs, whitepapers, and assets.</p>
-                    </div>
-                    <a href="#" class="btn-download">Download PDF</a>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="card">
-                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+4%0ARetention" alt="Retention Cover" class="book-cover">
-                    <div>
-                        <span class="tag">Phase 4: Growth</span>
-                        <h3>Retention & Expansion</h3>
-                        <p>The sale isn't the finish line. Master onboarding and Net Dollar Retention (NDR) strategies.</p>
-                    </div>
-                    <a href="#" class="btn-download">Download PDF</a>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="card">
-                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+5%0ALaunch+Plan" alt="Launch Plan Cover" class="book-cover">
-                    <div>
-                        <span class="tag">Phase 5: Execution</span>
-                        <h3>Launch Orchestration</h3>
-                        <p>The T-minus 8-week roadmap to coordinate Product, Marketing, and Sales for the big day.</p>
-                    </div>
-                    <a href="#" class="btn-download">Download PDF</a>
+                <div class="struggle-card">
+                    <h4>The "Guesswork" Launch</h4>
+                    <p>Strategy based on opinions, not quantified personas. This leads to high CAC, low retention, and weak messaging.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="framework">
-        <div class="container framework-content">
-            <h2>Based on the 5-Phase GTM Framework</h2>
-            <ul class="phase-list">
-                <li class="phase-item">1. Market Intelligence</li>
-                <li class="phase-item">2. Strategy & Offer</li>
-                <li class="phase-item">3. The Narrative</li>
-                <li class="phase-item">4. The Growth Engine</li>
-                <li class="phase-item">5. Execution & Measurement</li>
-            </ul>
+    <!-- LIBRARY SECTION (The Solution) -->
+    <section id="library" class="library-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Solution</h2>
+                <p>5 Workbooks. 1 Integrated System.</p>
+            </div>
+
+            <div class="grid">
+                
+                <!-- BOOK 1: MARKET INTELLIGENCE -->
+                <div class="card">
+                    <div class="book-cover">
+                        <div class="cover-art pattern-1"></div>
+                        <div class="book-title-group">
+                            <div class="book-series">Phase 1</div>
+                            <div class="book-main-title">The Market<br>Intelligence<br>Workbook</div>
+                        </div>
+                        <div class="book-logo">GTM</div>
+                    </div>
+                    <h3>Mapping the Battlefield</h3>
+                    <p>Stop targeting "everyone." Define quantified personas and find exactly where to win.</p>
+                    <a href="#" class="download-link">Download PDF &rarr;</a>
+                </div>
+
+                <!-- BOOK 2: STRATEGY & OFFER -->
+                <div class="card">
+                    <div class="book-cover">
+                        <div class="cover-art pattern-2"></div>
+                        <div class="book-title-group">
+                            <div class="book-series">Phase 2</div>
+                            <div class="book-main-title">Strategy<br>& Offer<br>Design</div>
+                        </div>
+                        <div class="book-logo">GTM</div>
+                    </div>
+                    <h3>Price, Package, Position</h3>
+                    <p>Architect an irresistible deal that maximizes revenue and fits your route-to-market.</p>
+                    <a href="#" class="download-link">Download PDF &rarr;</a>
+                </div>
+
+                <!-- BOOK 3: THE NARRATIVE -->
+                <div class="card">
+                    <div class="book-cover">
+                        <div class="cover-art pattern-3"></div>
+                        <div class="book-title-group">
+                            <div class="book-series">Phase 3</div>
+                            <div class="book-main-title">The Narrative<br>Workbook</div>
+                        </div>
+                        <div class="book-logo">GTM</div>
+                    </div>
+                    <h3>Words That Sell</h3>
+                    <p>Achieve "Language-Market Fit." Turn product features into customer conversations.</p>
+                    <a href="#" class="download-link">Download PDF &rarr;</a>
+                </div>
+
+                <!-- BOOK 4: GROWTH ENGINE -->
+                <div class="card">
+                    <div class="book-cover">
+                        <div class="cover-art pattern-4"></div>
+                        <div class="book-title-group">
+                            <div class="book-series">Phase 4</div>
+                            <div class="book-main-title">The Growth<br>Engine</div>
+                        </div>
+                        <div class="book-logo">GTM</div>
+                    </div>
+                    <h3>The Demand Machine</h3>
+                    <p>From customer journey mapping to sales enablement—orchestrate recurring growth.</p>
+                    <a href="#" class="download-link">Download PDF &rarr;</a>
+                </div>
+
+                <!-- BOOK 5: EXECUTION -->
+                <div class="card">
+                    <div class="book-cover">
+                        <div class="cover-art pattern-5"></div>
+                        <div class="book-title-group">
+                            <div class="book-series">Phase 5</div>
+                            <div class="book-main-title">Execution<br>& Metrics</div>
+                        </div>
+                        <div class="book-logo">GTM</div>
+                    </div>
+                    <h3>Launch & Measure</h3>
+                    <p>Optimize unit economics, manage budgets, and execute the perfect Go-Live.</p>
+                    <a href="#" class="download-link">Download PDF &rarr;</a>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 GTM Strategy Series. Designed for Product Leaders.</p>
+        <div class="container">
+            <p>&copy; 2025 The GTM Operating System. Designed for Product Leaders.</p>
+        </div>
     </footer>
 
 </body>
