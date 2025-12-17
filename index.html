@@ -95,21 +95,39 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center; /* Center content for book look */
+            text-align: center;
         }
 
         .card:hover {
             transform: translateY(-5px);
         }
 
-        .icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        /* NEW: Book Cover Styling */
+        .book-cover {
+            width: 180px;  /* Fixed width for consistency */
+            height: 250px; /* Vertical aspect ratio */
+            object-fit: cover;
+            border-radius: 4px 8px 8px 4px;
+            margin-bottom: 25px;
+            /* The 3D Book Shadow Effect */
+            box-shadow: 
+                -2px 0 0 rgba(255,255,255,0.4) inset, /* Spine highlight */
+                -5px 5px 15px rgba(0,0,0,0.25); /* Drop shadow */
+            border-left: 6px solid rgba(255,255,255,0.1); /* Spine effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover .book-cover {
+            transform: scale(1.02);
+            box-shadow: -8px 8px 20px rgba(0,0,0,0.3);
         }
 
         .card h3 {
             font-size: 1.4rem;
             margin-bottom: 10px;
             color: var(--navy);
+            width: 100%;
         }
 
         .tag {
@@ -118,7 +136,7 @@
             letter-spacing: 1px;
             color: var(--blue);
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: block;
         }
 
@@ -132,11 +150,12 @@
             background-color: var(--light-blue);
             color: var(--blue);
             text-align: center;
-            padding: 12px;
+            padding: 12px 30px; /* Wider button */
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             transition: 0.2s;
+            width: 100%;
         }
 
         .btn-download:hover {
@@ -210,8 +229,8 @@
             <div class="grid">
                 <!-- Card 1 -->
                 <div class="card">
+                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+1%0AICP+Profile" alt="ICP Workbook Cover" class="book-cover">
                     <div>
-                        <div class="icon">🏢</div>
                         <span class="tag">Phase 1: Intelligence</span>
                         <h3>The Ideal Customer Profile</h3>
                         <p>Don't just define the person. Define the company size, revenue, and tech stack before you sell.</p>
@@ -221,8 +240,8 @@
 
                 <!-- Card 2 -->
                 <div class="card">
+                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+2%0ACustomer+Journey" alt="Customer Journey Cover" class="book-cover">
                     <div>
-                        <div class="icon">🗺️</div>
                         <span class="tag">Phase 4: Growth</span>
                         <h3>The Customer Journey Map</h3>
                         <p>Connect marketing signals to sales actions. Map the path from stranger to closed-won revenue.</p>
@@ -232,8 +251,8 @@
 
                 <!-- Card 3 -->
                 <div class="card">
+                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+3%0AContent+Strategy" alt="Content Strategy Cover" class="book-cover">
                     <div>
-                        <div class="icon">📝</div>
                         <span class="tag">Phase 3: Narrative</span>
                         <h3>Content Strategy Plan</h3>
                         <p>Messaging is what you say; Content is how you deliver it. Plan your blogs, whitepapers, and assets.</p>
@@ -243,8 +262,8 @@
 
                 <!-- Card 4 -->
                 <div class="card">
+                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+4%0ARetention" alt="Retention Cover" class="book-cover">
                     <div>
-                        <div class="icon">🔄</div>
                         <span class="tag">Phase 4: Growth</span>
                         <h3>Retention & Expansion</h3>
                         <p>The sale isn't the finish line. Master onboarding and Net Dollar Retention (NDR) strategies.</p>
@@ -254,11 +273,11 @@
 
                 <!-- Card 5 -->
                 <div class="card">
+                    <img src="https://placehold.co/400x600/0a2540/ffffff?text=Workbook+5%0ALaunch+Plan" alt="Launch Plan Cover" class="book-cover">
                     <div>
-                        <div class="icon">🚀</div>
                         <span class="tag">Phase 5: Execution</span>
                         <h3>Launch Orchestration</h3>
-                        <p>The T-minus 8-week roadmap to align Product, Marketing, and Sales for the big day.</p>
+                        <p>The T-minus 8-week roadmap to coordinate Product, Marketing, and Sales for the big day.</p>
                     </div>
                     <a href="#" class="btn-download">Download PDF</a>
                 </div>
